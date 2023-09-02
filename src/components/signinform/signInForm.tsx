@@ -1,96 +1,97 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from 'react';
-import { useSetAtom } from 'jotai';
-import { userTokenAtom } from '../../atoms/userTokenAtom';
-import { userIdAtom } from '../../atoms/userIdAtom';
+// import { useState, useEffect } from 'react';
+// import { useSetAtom } from 'jotai';
+// import { userTokenAtom } from '../../atoms/userTokenAtom';
+// import { userIdAtom } from '../../atoms/userIdAtom';
 import './signinstyle.css';
 
 function SigninForm() {
-  const setUserToken = useSetAtom(userTokenAtom);
-  const setUserId = useSetAtom(userIdAtom)
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
+  // const setUserToken = useSetAtom(userTokenAtom);
+  // const setUserId = useSetAtom(userIdAtom)
+  // const [error, setError] = useState('');
+  // const [success, setSuccess] = useState('');
 
-  const InitialValues = { email: "",  pseudo: "", password: "" };
-  const [formValues, setFormValues] = useState(InitialValues);
-  const [formErrors] = useState({})
-  const [, setIsSubmit] = useState(false)
+  // const InitialValues = { email: "",  pseudo: "", password: "" };
+  // const [formValues, setFormValues] = useState(InitialValues);
+  // const [formErrors] = useState({})
+  // const [, setIsSubmit] = useState(false)
 
-  const handleChange = (event) =>{
-    const { id, value } = event.target
+  // const handleChange = (event) =>{
+  //   const { id, value } = event.target
 
-    setFormValues({...formValues, [id] : value })
+  //   setFormValues({...formValues, [id] : value })
 
-    console.log(formValues)
+  //   console.log(formValues)
 
-  }
+  // }
 
-  useEffect(() => {
-    console.log(formErrors)
-    if (Object.keys(formErrors).length === 0 && setIsSubmit){
-      console.log(formValues)
-    }
+  // useEffect(() => {
+  //   console.log(formErrors)
+  //   if (Object.keys(formErrors).length === 0 && setIsSubmit){
+  //     console.log(formValues)
+  //   }
 
-  }, []);
+  // }, []);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setError('');
-    setSuccess('');
-    setIsSubmit(true)
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   setError('');
+  //   setSuccess('');
+  //   setIsSubmit(true)
 
-    const email = formValues.email;
-    const pseudo = formValues.pseudo
-    const password = formValues.password;
+  //   const email = formValues.email;
+  //   const pseudo = formValues.pseudo
+  //   const password = formValues.password;
 
-    // const url = 'http://localhost:3000/users/sign_in'
-    const url = 'https://bibloback.fly.dev/users/sign_in'
+  //   // const url = 'http://localhost:3000/users/sign_in'
+  //   const url = 'https://bibloback.fly.dev/users/sign_in'
 
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          user: {
-            email: email,
-            pseudo: pseudo,
-            password: password,
-          }
-        }),
-      });
+  //   try {
+  //     const response = await fetch(url, {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({
+  //         user: {
+  //           email: email,
+  //           pseudo: pseudo,
+  //           password: password,
+  //         }
+  //       }),
+  //     });
 
-      if (response.ok) {
-        const token = await response.headers.get("Authorization");
-        setUserToken(token);
-        const responseData = await response.json();
-        setUserId(responseData.user.id);
+  //     if (response.ok) {
+  //       const token = await response.headers.get("Authorization");
+  //       setUserToken(token);
+  //       const responseData = await response.json();
+  //       setUserId(responseData.user.id);
 
-       setSuccess('Login avec succès!'); // Set success flash message
-      } else {
-        setError("L'email, le pseudo et le mot de passe ne correspondent pas ! Rééssaie ! ");
-      }
-    } catch (error) {
-      setError("Le serveur n'est pas accessible pour le moment, veuillez essayer dans quelques instants !");
-    }
-    // <disconnectUser /> aller chercher dans la branche getmembers 
-  };
+  //      setSuccess('Login avec succès!'); // Set success flash message
+  //     } else {
+  //       setError("L'email, le pseudo et le mot de passe ne correspondent pas ! Rééssaie ! ");
+  //     }
+  //   } catch (error) {
+  //     setError("Le serveur n'est pas accessible pour le moment, veuillez essayer dans quelques instants !");
+  //   }
+  //   // <disconnectUser /> aller chercher dans la branche getmembers 
+  // };
 
   return (
-    <form className="signinform" onSubmit={handleSubmit}>
+    // <form className="signinform" onSubmit={handleSubmit}>
+    <form className="signinform">
       <h2 className='signintitle'>Se connecter</h2>
-      {error && <p>{error}</p>}
-      {success && <p>{success}</p>}
+      {/* {error && <p>{error}</p>} */}
+      {/* {success && <p>{success}</p>} */}
       <div>
         <label htmlFor="email">Email :   </label>
         <br></br>
         <input
           type="email"
           id="email"
-          value={formValues.email}
+          // value={formValues.email}
           placeholder="email"
-          onChange={handleChange}
+          // onChange={handleChange}
           required
         />
       </div>
@@ -101,9 +102,9 @@ function SigninForm() {
         <input
           type="password"
           id="password"
-          value={formValues.password}
+          // value={formValues.password}
           placeholder="password"
-          onChange={handleChange}
+          // onChange={handleChange}
           required
         />
       </div>
