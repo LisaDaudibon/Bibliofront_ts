@@ -1,0 +1,128 @@
+/* Custom CSS for Navbar */
+
+.navbar {
+  width: 100%;
+  background-color: #121111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 5%;
+  justify-content: space-around;
+}
+
+.navbar-list li {
+  margin-right: 10px;
+}
+
+.navbar-list li a,
+.navbar-list button {
+  color : rgb(186, 124, 30) ;
+  text-decoration: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-list li a:hover {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+.navbar-list button {
+  margin-top: 5px;
+  margin-right: 5px;
+  background-color: darkred;
+  font-size: 13px;
+  height: 40px;
+  width: 45px;
+  padding:0;
+}
+
+.logo-container {
+  display: flex;
+}
+
+.logo {
+  max-width: 200px;
+  max-height: 80px;
+  padding: 40px 0;
+  color: white;
+}
+
+.nameLogo {
+  max-height: 100px;
+  padding: 30px 0;
+}
+
+.menuLink {
+  color: #000; /* Set the color for the link text */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.menuLink .icon {
+  margin-right: 5px; /* Adjust the spacing between the icon and the link text */
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-list {
+    justify-content: center;
+  }
+  
+  .menuLink span {
+    display: none;
+    padding-right: 15px; /* Hide the link text on smaller devices */
+  }
+
+  .iconContainer {
+    justify-content: center; /* Center the icons when logo and logo name disappear */
+  }
+
+  .logoContainer {
+    display: none; /* Hide the logo container on smaller devices */
+  } /* Center the icons when logo and logo name disappear */
+}
+
+.iconContainer:hover .menuLink {
+  opacity: 1;
+}
+
+.icon {
+  font-size: 30px;
+  color : white ;
+  margin-left: 10px;
+}
+
+.icon:hover {
+  color : rgb(186, 124, 30) ;
+  }
+
+.menuLink:hover .icon {
+    color: rgb(186, 124, 30);
+  }
+
+.menuListItem {
+  flex: 4;
+  display: flex;
+}
+
+.loginLink {
+  font-size: 10px;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: row-reverse;
+}

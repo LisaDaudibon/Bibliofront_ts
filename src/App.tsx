@@ -5,7 +5,7 @@ import SignUp from './pages/signup';
 import SignIn from './pages/signin';
 import Profile from './pages/profile';
 import Books from './pages/Books/books';
-// import Navbar from './components/navbar/navbar';
+import Navbar from './components/navbar/navbar';
 // import About from './components/contact/contact';
 // import Footer from './components/footer/footer';
 import PageNotFound from './pages/404/404error';
@@ -16,7 +16,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        {/* <Navbar /> */}
+        <Navbar />
         <Routes>
           <Route path="/" element={<Books />} />
           <Route path="/users" element={<SignUp />} />
