@@ -2,9 +2,9 @@
 ### Projet final pour The Hacking Project
 
 ## Découpage du projet
-Le front a été créé avec Vite et utilise React et Javascript. Le back a été créé en utilisant Rails. <br>
+Le front a été créé avec Vite et utilise React et Typescript. Le back a été créé en utilisant Rails. <br>
 <br>
-Lien du front du site en production : https://biblofront.vercel.app/ <br>
+Lien du front du site en production :  <br>
 Lien du back du site en production : https://bibloback.fly.dev/<br>
 Lien du Github pour le back : https://github.com/LisaDaudibon/Bibloback<br>
 <br>
