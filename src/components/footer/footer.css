@@ -1,0 +1,94 @@
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-right: 15px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a span {
+  margin-left: 5px;
+  color: #2B817B;
+
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.footer-logo img {
+  width: auto;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-links a span {
+    display: none;
+  }
+
+  .footer-logo {
+    display: none;
+  }
+}
+
+.team-popup {
+  position: fixed; /* Change position to fixed */
+  bottom: 80px; /* Adjust the value according to the height of the popup */
+  left: 65%;
+  transform: translateX(-50%);
+  z-index: 3; /* Increase the z-index to ensure it appears above the footer */
+  background-color: #1a1919cd;
+  max-width: 150px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(81, 248, 145, 0.845);
+}
+
+.team-popup a {
+  display: block;
+  color: #44a14f;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; /* Increase the z-index to ensure it appears above the popup */
+  background-color: #121111;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 2; /* Increase the z-index to ensure it appears above the popup */
+  height: 70px; /* Set a fixed height for the footer */
+}
+
+#button-footer{
+  height: 25px;
+  padding: 0 5px;
+}
+
+.footer-links li a:hover .svg-inline--fa {
+  color: rgb(186, 124, 30);
+}

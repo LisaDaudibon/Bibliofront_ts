@@ -7,7 +7,7 @@ import Profile from './pages/profile';
 import Books from './pages/Books/books';
 import Navbar from './components/navbar/navbar';
 // import About from './components/contact/contact';
-// import Footer from './components/footer/footer';
+import Footer from './components/footer/footer';
 import PageNotFound from './pages/404/404error';
 import './App.css';
 
@@ -26,7 +26,7 @@ function App() {
           {/* <Route path="/about" element={<About />} /> */}
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </div>
   );
